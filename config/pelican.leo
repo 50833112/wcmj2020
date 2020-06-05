@@ -41,14 +41,8 @@
 </v>
 <v t="leo.20180115142025.1"><vh>保留之前舊的設定檔案</vh></v>
 </v>
-<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh>
-<v t="yen.20170224232341.3"><vh>@edit base.html</vh></v>
-</v>
-<v t="leo.20170710015301.1"><vh>@path theme/pelican-bootstrap3/templates</vh>
-<v t="leo.20170710015311.1"><vh>@edit search.html</vh></v>
-<v t="leo.20170710095845.1"><vh>@edit base.html</vh></v>
-<v t="leo.20170710101854.1"><vh>@edit article.html</vh></v>
-</v>
+<v t="yen.20170224232341.2"><vh>@path theme/pelican-bootstrap3_local/templates</vh></v>
+<v t="leo.20170710015301.1"><vh>@path theme/pelican-bootstrap3/templates</vh></v>
 </v>
 <v t="leo.20170710015511.1"><vh>編輯 plugin</vh>
 <v t="leo.20170710015523.1"><vh>@path plugin</vh>
@@ -66,18 +60,23 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2018</vh>
 <v t="leo.20180423103639.1"><vh>2018 Fall CP 課程</vh>
-<v t="leo.20200522152628.1"><vh>@clean 202005223.md</vh></v>
-<v t="leo.20200522152559.1"><vh>@clean 202005222.md</vh></v>
-<v t="leo.20200522143720.1"><vh>@clean 202005221.md</vh></v>
+<v t="leo.20200522152628.1"><vh>@clean 202005223.md</vh>
+<v t="leo.20200529161418.1"><vh>w12-3</vh></v>
+</v>
+<v t="leo.20200522152559.1"><vh>@clean 202005222.md</vh>
+<v t="leo.20200529161646.1"><vh>w12-2</vh></v>
+</v>
+<v t="leo.20200522143720.1"><vh>@clean 202005221.md</vh>
+<v t="leo.20200529161748.1"><vh>w12-1</vh></v>
+</v>
 </v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
 </v>
-<v t="leo.20200529143431.1"><vh>@button_to_blogger</vh>
-<v t="leo.20200529143525.1"><vh>@add_to_blogger</vh></v>
-<v t="leo.20200529143619.1"><vh>@edit_to-blogger</vh></v>
-</v>
+<v t="leo.20200529143431.1"><vh>@button_to_blogger</vh></v>
+<v t="leo.20200529143525.1"><vh>@button add_to_blogger</vh></v>
+<v t="leo.20200529143619.1"><vh>@button edit_to_blogger</vh></v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
 </vnodes>
@@ -194,36 +193,14 @@ Tags: 2018FallCP
 Slug: 2020-wcmj2020-12-1
 Author: yen
 ---
-
 架設網站
-----
-step1: 登入 gm 帳號後, [下載]  至 downloads 目錄, 然後以 7zip 解開到 C:\wcmj2020 目錄下
 
-step2: 解開後的目錄為 c:\wcmj2020\wcm2020, 其中有 start.bat 與 stop.bat, 開啟可攜系統時, 以滑鼠點擊 start.bat, 關閉可攜系統時, 以滑鼠點擊 stop.bat
-
-step3: 以個人學號所建立的 github 帳號, 後建立 wcmj2020 倉儲
-
-step4: git clone https://github.com/學號/wcmj2020
-
-step5: git submodule add https://github.com/mdecourse/cmsimde
-
-step6: 進入cmsimde以python wsgi.py啟動動態系統, 以瀏覽器 https://localhost:9443 可以利用 admin 為帳號登入管理
-
-step7: 動態系統維護後, 利用 generate_pages 轉為靜態
-
-step8: 
-git add .
-git commit -m "commit message"
-git push
-
-輸入帳號密碼or不需輸入
+&lt;!--PELICAN_END_SUMMARY --&gt;
+@others
 
 
 
-
-
-
-[下載]:https://drive.google.com/open?id=1SvMKQFViJ0mskt20UhSqkjzckB3noSJH</t>
+</t>
 <t tx="leo.20200522152559.1">@language md
 ---
 Title: wcmj2020 課程
@@ -233,34 +210,11 @@ Tags: 2018FallCP
 Slug: 2020-wcmj2020-12-2
 Author: yen
 ---
-
 以SSH維護倉儲
-----
-step1: 下載putty 下載工具組, [一般版]或[特殊可攜版]
 
-step2: 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境以 ssh-keygen -t rsa -b 4096 -C "使用者學號", 在 /y/home/.ssh 目錄下建立 id_rsa  id_rsa.pub 等 private key 與 public key
 
-之後以 SciTE 開啟 id_rsa.pub 後, 將此 public key 的內容, 以新增添加到 Github.com 帳號下 personal settings -&gt; SSH and GPG keys 頁面下.
-step3: 利用 puttygen.exe 將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式, 並修改隨身系統的啟動批次檔案, 指定利用 putty 目錄下的 plink 執行 git 指令的網路代理設定
-
-修改啟動的  start.bat加入下列指令
-1. set GIT_HOME=%Disk%:\portablegit\bin\
-2. set GIT_SSH=%Disk%:\putty\plink.exe
- 
-step4: 利用 puttygen.exe 載入第二步驟所建立的 private key, 也就是 id_rsa.
-
-開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中 github.com session 時, 在 Connection-&gt;SSH-&gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位.
- 
-並在 Connection-&gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.
-
-step5: 確定 home 下的 .ssh 目錄中的 config 設定檔案
-
-step6: 最後再將 wcmj2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線
-
-step7: 之後就可透過 .ppk private key 與 Github.com 上的 public key 對應, 無須帳號密碼及可進行 pit push 
-
-[一般版]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
-[特殊可攜版]: http://jakub.kotrla.net/putty/ </t>
+&lt;!--PELICAN_END_SUMMARY --&gt;
+@others</t>
 <t tx="leo.20200522152628.1">@language md
 ---
 Title: wcmj2020 課程
@@ -270,36 +224,18 @@ Tags: 2018FallCP
 Slug: 2020-wcmj2020-12-3
 Author: yen
 ---
+
 建立網誌
-----
-step1: 利用瀏覽器進入 mde.tw 再進入 wcmj2020 到實習項目中下載  wcmj2020_tool.7z
 
-step2: 解壓縮  wcmj2020_tool.7z 後 進入 start.bat 輸入指令開啟leo 
-Y:\&gt;cd tmp
-Y:\tmp&gt;cd wcmj2020
-Y:\tmp\wcmj2020&gt;leo
-
-step3: 利用leo開啟 pelican.leo 修改
-共用:
-AUTHOR = '50833112'
-SITENAME = '名稱'
-遠端的SITEURL
-
-step4:在2018 Fall CP 課程中按 Ctrl+i  新增網誌
-
-step5: 存取 local-blog 後再利用 start.bat 輸入
-Y:\&gt;cd tmp
-Y:\tmp&gt;cd wcmj2020
-Y:\tmp\wcmj2020&gt;pelican markdown -o blog -s publishconf.py
-
-step6: 最後到 https://localhost:8444 確認blog 是否有推上去</t>
+&lt;!--PELICAN_END_SUMMARY --&gt;
+@others</t>
 <t tx="leo.20200529143431.1"></t>
 <t tx="leo.20200529143525.1">@language python
 from markdown import markdown
 from oauth2client import client
 from googleapiclient import sample_tools
 import os
- 
+
 os.environ['TZ'] = 'Asia/Taipei'
 argv = ""
 # 認證並建立服務
@@ -309,8 +245,8 @@ argv = ""
 service, flags = sample_tools.init(
   argv, 'blogger', 'v3', __doc__, "./../../client_secrets.json",
   scope='https://www.googleapis.com/auth/blogger')
- 
- 
+
+
 def get_cat_tag_content(data):
     # 請注意, 因為 data 來自 .md 的檔案 內容, 第1行為 ---
     # 用跳行符號分割
@@ -330,7 +266,7 @@ def get_cat_tag_content(data):
     #content = content.replace('~~~python', '[code lang="python"]')
     #content = content.replace('~~~', '[/code]')
     return title, category, tags, content
- 
+
 # 從目前所在節點的 body pan 中取出類別, tags 以及文章內容
 # p.h 為 @clean filename.md
 # 因為要使用 @clean 節點掛上為後的 blogger post_id, 因此改為讀 .md 檔案
@@ -350,7 +286,7 @@ content = markdown(content)
 content = content.replace("&lt;h2&gt;", "&lt;h2&gt;&lt;font size='4'&gt;")
 content = content.replace("&lt;/h2&gt;", "&lt;/font&gt;&lt;/h2&gt;")
 # g.es(content)
- 
+
 try:
     '''
     users = service.users()
@@ -396,7 +332,7 @@ from markdown import markdown
 from oauth2client import client
 from googleapiclient import sample_tools
 import os
- 
+
 os.environ['TZ'] = 'Asia/Taipei'
 argv = ""
 # 認證並建立服務
@@ -406,8 +342,8 @@ argv = ""
 service, flags = sample_tools.init(
   argv, 'blogger', 'v3', __doc__, "./../../client_secrets.json",
   scope='https://www.googleapis.com/auth/blogger')
- 
- 
+
+
 def get_cat_tag_content(data):
     # 請注意, 因為 data 來自 .md 的檔案 內容, 第1行為 ---
     # 用跳行符號分割
@@ -427,7 +363,7 @@ def get_cat_tag_content(data):
     #content = content.replace('~~~python', '[code lang="python"]')
     #content = content.replace('~~~', '[/code]')
     return title, category, tags, content
- 
+
 # 從目前所在節點的 body pan 中取出類別, tags 以及文章內容
 # p.h 為 @clean filename.md
 # 因為要使用 @clean 節點掛上為後的 blogger post_id, 因此改為讀 .md 檔案
@@ -447,7 +383,7 @@ content = markdown(content)
 content = content.replace("&lt;h2&gt;", "&lt;h2&gt;&lt;font size='4'&gt;")
 content = content.replace("&lt;/h2&gt;", "&lt;/font&gt;&lt;/h2&gt;")
 # g.es(content)
- 
+
 try:
     blogs = service.blogs()
     # 取得使用者所建立網誌名稱
@@ -472,6 +408,80 @@ try:
     g.es("已經將更新資料送往 Blogger!")
 except(client.AccessTokenRefreshError):
     g.es("error")</t>
+<t tx="leo.20200529161418.1">建立網誌
+----
+step1: 利用瀏覽器進入 mde.tw 再進入 wcmj2020 到實習項目中下載  wcmj2020_tool.7z
+
+step2: 解壓縮  wcmj2020_tool.7z 後 進入 start.bat 輸入指令開啟leo 
+Y:\&gt;cd tmp
+Y:\tmp&gt;cd wcmj2020
+Y:\tmp\wcmj2020&gt;leo
+
+step3: 利用leo開啟 pelican.leo 修改
+共用:
+AUTHOR = '50833112'
+SITENAME = '名稱'
+遠端的SITEURL
+
+step4:在2018 Fall CP 課程中按 Ctrl+i  新增網誌
+
+step5: 存取 local-blog 後再利用 start.bat 輸入
+Y:\&gt;cd tmp
+Y:\tmp&gt;cd wcmj2020
+Y:\tmp\wcmj2020&gt;pelican markdown -o blog -s publishconf.py
+
+step6: 最後到 https://localhost:8444 確認blog 是否有推上去</t>
+<t tx="leo.20200529161646.1">以SSH維護倉儲
+----
+step1: 下載putty 下載工具組, [一般版]或[特殊可攜版]
+
+step2: 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境以 ssh-keygen -t rsa -b 4096 -C "使用者學號", 在 /y/home/.ssh 目錄下建立 id_rsa  id_rsa.pub 等 private key 與 public key
+
+之後以 SciTE 開啟 id_rsa.pub 後, 將此 public key 的內容, 以新增添加到 Github.com 帳號下 personal settings -&gt; SSH and GPG keys 頁面下.
+step3: 利用 puttygen.exe 將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式, 並修改隨身系統的啟動批次檔案, 指定利用 putty 目錄下的 plink 執行 git 指令的網路代理設定
+
+修改啟動的  start.bat加入下列指令
+1. set GIT_HOME=%Disk%:\portablegit\bin\
+2. set GIT_SSH=%Disk%:\putty\plink.exe
+ 
+step4: 利用 puttygen.exe 載入第二步驟所建立的 private key, 也就是 id_rsa.
+
+開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中 github.com session 時, 在 Connection-&gt;SSH-&gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位.
+ 
+並在 Connection-&gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.
+
+step5: 確定 home 下的 .ssh 目錄中的 config 設定檔案
+
+step6: 最後再將 wcmj2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線
+
+step7: 之後就可透過 .ppk private key 與 Github.com 上的 public key 對應, 無須帳號密碼及可進行 pit push 
+
+[一般版]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
+[特殊可攜版]: http://jakub.kotrla.net/putty/ </t>
+<t tx="leo.20200529161748.1">架設網站
+----
+step1: 登入 gm 帳號後, [下載]  至 downloads 目錄, 然後以 7zip 解開到 C:\wcmj2020 目錄下
+
+step2: 解開後的目錄為 c:\wcmj2020\wcm2020, 其中有 start.bat 與 stop.bat, 開啟可攜系統時, 以滑鼠點擊 start.bat, 關閉可攜系統時, 以滑鼠點擊 stop.bat
+
+step3: 以個人學號所建立的 github 帳號, 後建立 wcmj2020 倉儲
+
+step4: git clone https://github.com/學號/wcmj2020
+
+step5: git submodule add https://github.com/mdecourse/cmsimde
+
+step6: 進入cmsimde以python wsgi.py啟動動態系統, 以瀏覽器 https://localhost:9443 可以利用 admin 為帳號登入管理
+
+step7: 動態系統維護後, 利用 generate_pages 轉為靜態
+
+step8: 
+git add .
+git commit -m "commit message"
+git push
+
+輸入帳號密碼or不需輸入
+[下載]:https://drive.google.com/open?id=1SvMKQFViJ0mskt20UhSqkjzckB3noSJH
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
