@@ -69,6 +69,9 @@
 <v t="leo.20200522143720.1"><vh>@clean 202005221.md</vh>
 <v t="leo.20200529161748.1"><vh>w12-1</vh></v>
 </v>
+<v t="leo.20200612152021.1"><vh>@clean 20200612-1.md</vh>
+<v t="leo.20200612152115.1"><vh>w15-1</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -481,6 +484,27 @@ git push
 
 輸入帳號密碼or不需輸入
 [下載]:https://drive.google.com/open?id=1SvMKQFViJ0mskt20UhSqkjzckB3noSJH
+</t>
+<t tx="leo.20200612152021.1">@language md
+---
+Title: wcmj2020 課程
+Date: 2020-06-12 15:23
+Category: Misc
+Tags: 2018FallCP
+Slug: 2020-wcmj2020-15-1
+Author: yen
+---
+建立組別網站 並加上內容
+
+&lt;!--PELICAN_END_SUMMARY --&gt;
+@others
+
+
+
+</t>
+<t tx="leo.20200612152115.1">與建立個人網站基本上無差異 ，差別只在於組別網站為多人共同使用。在修改網站時，只需要將遠端的資料 clone 下來，修改或加上新的資料，最後再上傳至遠端。網站的資料將為最新修改的的內容。
+現代網絡發達，可以像似我們所練習的多人共同製作，利用網絡建立一個倉儲或是網站，第一人將資料上傳到雲端後，便可開始多人同時製作，此方法可以減少製作所需時間，達到更快的速度。
+
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
