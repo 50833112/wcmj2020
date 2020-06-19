@@ -60,6 +60,10 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2018</vh>
 <v t="leo.20180423103639.1"><vh>2018 Fall CP 課程</vh>
+<v t="leo.20200613143423.1"><vh>@clean 20200613.md</vh>
+<v t="leo.20200613143543.1"><vh>w15-1</vh></v>
+<v t="leo.20200619125723.1"><vh>448170673162012733</vh></v>
+</v>
 <v t="leo.20200522152628.1"><vh>@clean 202005223.md</vh>
 <v t="leo.20200529161418.1"><vh>w12-3</vh></v>
 </v>
@@ -506,6 +510,40 @@ Author: yen
 現代網絡發達，可以像似我們所練習的多人共同製作，利用網絡建立一個倉儲或是網站，第一人將資料上傳到雲端後，便可開始多人同時製作，此方法可以減少製作所需時間，達到更快的速度。
 
 </t>
+<t tx="leo.20200613143423.1">@language md
+---
+Title: wcmj2020 課程
+Date: 2020-06-13 14:00
+Category: Misc
+Tags: 2018FallCP
+Slug: 2020-wcmj2020-12-3
+Author: yen
+---
+
+利用leo更新blogger
+
+&lt;!--PELICAN_END_SUMMARY --&gt;
+@others</t>
+<t tx="leo.20200613143543.1">利用leo更新blogger
+----
+step1: 利用google chrome 開啟[google apis]，建立一把desktop client的金鑰。啟動 blogger API V3 存在tmp下建立檔名"client_secrets.json"
+
+step2: 利用start.bat 開起 leo
+
+step3: 建立 add to blogger &amp; edit to blogger，從mde.tw中的wcmj2020 w12-13分別複製程式碼。
+
+step4: 將所寫日誌改為 @clean 起頭，將內文存取到文章標題下一節
+
+step5: 按下按鈕add to blogger，上傳文章到blogger
+
+
+
+
+
+
+
+[google apis]:https://console.developers.google.com/</t>
+<t tx="leo.20200619125723.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
